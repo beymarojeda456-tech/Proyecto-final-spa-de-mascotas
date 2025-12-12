@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyecto final</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+ 
+  <section id="login-section">
+    <div class="login-box">
+
+      <div class="login-left">
+        <img src="img/logo.jpg" alt="logo" class="logo" />
+        <h1>Corte y Ronroneo servicio a mascotas</h1>
+        <p>El arte del bienestar, para perros y gatos por igual.</p>
+      </div>
+
+      <div class="login-right">
+        <img src="img/baner.jpg" class="banner" alt="banner">
+
+        <form id="login-form">
+          <h2>Iniciar sesión</h2>
+          <input type="text" id="user" placeholder="Usuario" required />
+          <input type="password" id="pass" placeholder="Contraseña" required />
+          <button type="submit">Ingresar</button>
+          <p id="login-msg" class="msg"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <nav id="navbar" class="hidden">
+    <button data-section="mod-registro">Registro</button>
+    <button data-section="mod-agenda">Agenda</button>
+    <button data-section="mod-carrito">Carrito</button>
+    <button id="logout-btn">Cerrar sesión</button>
+  </nav>
+
+ 
+  <section id="mod-registro" class="modulo hidden">
+    <h2>Registro de Dueños y Mascotas</h2>
+
+    <div class="card neon-card">
+      <h3>Registrar dueño</h3>
+      <div class="i"></div>
+      <form id="form-dueno">
+        <input id="dueno_nombre" type="text" placeholder="Nombre" required>
+        <input id="dueno_tel" type="text" placeholder="Teléfono" required>
+        <input id="dueno_correo" type="email" placeholder="Correo" required>
+        <button>Guardar dueño</button>
+      </form>
+    </div>
+
+    <div class="card neon-card">
+      <h3>Registrar mascota</h3>
+      <div class="src: img/dueño.jpg"></div>
+      <form id="form-mascota">
+        <input id="mascota_nombre" type="text" placeholder="Nombre" required>
+
+        <select id="mascota_especie" required>
+          <option value="">Seleccione especie</option>
+          <option value="perro">Perro</option>
+          <option value="gato">Gato</option>
+        </select>
+
+        <select id="mascota_raza" required>
+          <option value="">Seleccione primero especie</option>
+        </select>
+
+        <button>Guardar mascota</button>
+      </form>
+    </div>
+  </section>
+
+  
+  <section id="mod-agenda" class="modulo hidden">
+    <h2>Agenda de Servicios</h2>
+
+    <div class="card neon-card">
+      <div class=""></div>
+      <form id="form-agenda">
+        <input id="ag_fecha" type="date" required>
+        <input id="ag_hora" type="time" required>
+
+        <select id="ag_mascota" required>
+          <option value="">Seleccione mascota</option>
+        </select>
+
+        <select id="ag_servicio" required>
+          <option value="">Seleccione servicio</option>
+          <option value="grooming y spa">Grooming & Spa</option>
+          <option value="vacunacion">Vacunación</option>
+          <option value="consulta medica">Consulta Médica</option>
+        </select>
+
+        <button>Agendar</button>
+      </form>
+    </div>
+
+    <h3>Agendamientos</h3>
+    <ul id="lista-agenda" class="list-box neon-list"></ul>
+  </section>
+
+
+<section id="mod-carrito" class="modulo hidden">
+  <h2>Carrito de Compras</h2>
+
+  <div id="catalogo" class="card-container"></div>
+
+  <h3>Carrito</h3>
+  <ul id="carrito-lista" class="list-box neon-list"></ul>
+
+  <div class="total-box neon-total">
+    Subtotal: Bs <span id="subtotal">0</span><br>
+    Total: Bs <span id="total">0</span>
+  </div>
+</section>
+
+
+  <footer>
+    © 2025 Corte y Ronroneo servicio a mascotas
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
